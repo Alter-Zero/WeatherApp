@@ -1,0 +1,256 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    background-color: #00D9F1;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.background-div{
+    background-image: url(Borders.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: ". search-container search-container ." "actualWeather-container actualWeather-container container-extra container-extra" "actualWeather-container actualWeather-container container-extra container-extra";
+    height: 100%;
+}
+
+.off{
+    display: none;
+}
+
+.active{
+    animation: displayShow 1s ease-in-out;
+}
+
+@keyframes displayShow {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+footer{
+    z-index: 5;
+    position: absolute;
+    bottom: 0px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 20px;
+    color: #28C7FA;
+}
+footer a{
+    color: #00D9F1;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+/* Top */
+.search-container{
+    grid-area: search-container;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location::placeholder{
+    color: rgb(0, 217, 241);
+}
+
+.location,
+.search{
+    border: none;
+    outline: none;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.15),
+    0px 1px 3px rgba(0, 0, 0, 0.2);
+    color: #00D9F1;
+    font-size: 22px;
+    font-weight: 600;
+    border-bottom: 3px solid #28C7FA;
+}
+
+.location{
+    padding-left: 10px;
+    border-radius: 15px 0 15px 0;
+}
+
+.search{
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search:hover, .search:focus{
+    background-color: #28C7FA;
+    color: white;
+}
+
+/* Left */
+
+.actualWeather-container, .container-weekly{
+    color: #00D9F1;
+    padding-left: 20px;
+    border-bottom: 3px solid #28C7FA;
+    background-color: white;
+    height: 330px;
+    box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.15),
+    0px 1px 3px rgba(0, 0, 0, 0.2);
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.actualWeather-container { 
+    grid-area: actualWeather-container;
+    border-radius: 0 20px 0 20px;
+}
+
+h1,h2{
+    text-align: center;
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+h1{
+    font-size: 35px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+span{
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+p[data-left]{
+    margin-bottom: 10px;
+}
+
+
+
+/* Right */
+.container-extra {
+    grid-area: container-extra;
+}
+.container-weekly {
+    display: grid;
+    grid-template-columns: 50px 200px 200px auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "days-container conditions-container conditions-container temperature-container" "days-container conditions-container conditions-container temperature-container" "days-container conditions-container conditions-container temperature-container";
+    border-radius: 20px 0 20px 0;
+}
+
+.days-container {
+    grid-area: days-container;
+}
+
+.conditions-container {
+    grid-area: conditions-container;
+}
+
+.temperature-container {grid-area: temperature-container;
+    text-align: center;
+    display: grid;
+}
+
+p{
+    padding-bottom: 15px;
+}
+.top{
+    font-weight: 600;
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+.temperature-icon{
+    position: absolute;
+    height: 90px;
+    top: 40%;
+}
+
+
+
+/* Background Animation */
+body li{
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(172, 172, 172, 0.185);
+    border-radius: 5px;
+    z-index: -1;
+    bottom: -50px;
+    animation: animate 8s linear infinite;
+}
+
+body li:nth-child(1){
+    right: 0;
+    animation-delay: 0s;
+}
+body li:nth-child(2){
+    right: 20vw;
+    animation-delay: 10s;
+}
+body li:nth-child(3){
+    right: 35vw;
+    animation-delay: 5s;
+}
+body li:nth-child(4){
+    right: 50vw;
+    animation-delay: 3s;
+}
+body li:nth-child(5){
+    right: 55vw;
+    animation-delay: 2.5s;
+}
+body li:nth-child(6){
+    right: 60vw;
+    animation-delay: 6s;
+}
+body li:nth-child(7){
+    right: 75vw;
+    animation-delay: 4s;
+}
+body li:nth-child(8){
+    right: 70vw;
+    animation-delay: 8s;
+}
+body li:nth-child(9){
+    right: 90vw;
+    animation-delay: 1.5s;
+}
+body li:nth-child(10){
+    right: 95vw;
+    animation-delay: 0.5s;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0) rotate(0deg)
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg)
+    }
+}

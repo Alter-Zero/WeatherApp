@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="script.js" defer></script>
+    <title>Weather app</title>
+</head>
+<body>
+    <!-- Components for background animation -->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <div class="background-div">
+        <div class="container">
+            <!-- Top information - Search -->
+            <div class="search-container">
+                <input type="text" placeholder="Chose one location" class="location">
+                <button class="search">Search</button>
+            </div>
+
+            <!-- Left information -->
+            <div class="actualWeather-container off">
+                <h1 data-left>London, UK</h1>
+                <h2 data-left>21ºC</h2>
+                <p data-left class="desc">Climate description:</p>
+                <p data-left class="desc">Humidity:</p>
+                <p data-left class="desc">WindSpeed:</p>
+                <p data-left class="desc">Summaryof the day:</p>
+            </div>
+    
+            <!-- Right information -->
+            <div class="container-extra off">
+                <div class="container-weekly">
+                    <div class="days-container">
+                        <p class="top">Day</p>
+                        <p data-week>Day</p>
+                        <p data-week>Day</p>
+                        <p data-week>Day</p>
+                        <p data-week>Day</p>
+                        <p data-week>Day</p>
+                        <p data-week>Day</p>
+                        <p data-week>Day</p>
+                        <p data-week>Day</p>
+                    </div>
+                    <div class="conditions-container">
+                        <p class="top">Condition</p>
+                        <p data-condit>Condition</p>
+                        <p data-condit>Condition</p>
+                        <p data-condit>Condition</p>
+                        <p data-condit>Condition</p>
+                        <p data-condit>Condition</p>
+                        <p data-condit>Condition</p>
+                        <p data-condit>Condition</p>
+                        <p data-condit>Condition</p>
+                    </div>
+                    <div class="temperature-container">
+                        <p class="top">Temperature</p>
+                        <p data-temp>Temp</p>
+                        <p data-temp>Temp</p>
+                        <p data-temp>Temp</p>
+                        <p data-temp>Temp</p>
+                        <p data-temp>Temp</p>
+                        <p data-temp>Temp</p>
+                        <p data-temp>Temp</p>
+                        <p data-temp>Temp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>Credits for: <br>
+        <a href="https://opencagedata.com/">Open Cage</a> <br>
+        <a href="darksky.net">Dark Sky</a> <br>
+        <a href="https://www.amcharts.com/">amCharts</a>
+    </footer>
+</body>
+</html>
